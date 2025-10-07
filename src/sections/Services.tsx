@@ -15,7 +15,7 @@ export const Services: React.FC = () => {
       icon: Truck,
       title: 'Land Transport',
       description: 'Cost-effective overland shipping through VRL and regional partners.',
-      features: ['7-10 day delivery', 'Bulk cargo support', 'Multi-stop routes', 'Secure handling'],
+      features: ['5-8 day delivery', 'Bulk cargo support', 'Multi-stop routes', 'Secure handling'],
       gradient: 'from-orange-500 to-red-500'
     },
     {
@@ -29,7 +29,7 @@ export const Services: React.FC = () => {
       icon: Cpu,
       title: 'Multi-Modal AI Platform',
       description: 'Intelligent logistics orchestration combining air, land, and sea for optimal efficiency.',
-      features: ['AI route optimization', 'Cost prediction', 'Delay forecasting', 'Smart recommendations'],
+      features: ['AI route optimisation', 'Cost prediction', 'Delay forecasting', 'Smart recommendations'],
       gradient: 'from-purple-500 to-pink-500'
     }
   ];

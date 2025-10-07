@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Package, MapPin, Plane, Truck, Ship, ArrowRight, CheckCircle, Calendar, DollarSign } from 'lucide-react';
+import { Package, Plane, Truck, Ship, CheckCircle, Calendar, DollarSign } from 'lucide-react';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
 import { Input, Select } from '../components/Input';
@@ -115,15 +115,13 @@ export const Booking: React.FC = () => {
         <div className="flex items-center justify-center mb-12">
           {[1, 2, 3, 4].map((s, idx) => (
             <React.Fragment key={s}>
-              <div className={`flex items-center justify-center w-12 h-12 rounded-full font-bold transition-all ${
-                step >= s ? 'bg-gradient-to-r from-[#0077B6] to-[#F76C1B] text-white scale-110' : 'bg-gray-200 text-gray-500'
-              }`}>
+              <div className={`flex items-center justify-center w-12 h-12 rounded-full font-bold transition-all ${step >= s ? 'bg-gradient-to-r from-[#0077B6] to-[#F76C1B] text-white scale-110' : 'bg-gray-200 text-gray-500'
+                }`}>
                 {step > s ? <CheckCircle className="w-6 h-6" /> : s}
               </div>
               {idx < 3 && (
-                <div className={`w-16 h-1 mx-2 rounded-full transition-all ${
-                  step > s ? 'bg-gradient-to-r from-[#0077B6] to-[#F76C1B]' : 'bg-gray-200'
-                }`} />
+                <div className={`w-16 h-1 mx-2 rounded-full transition-all ${step > s ? 'bg-gradient-to-r from-[#0077B6] to-[#F76C1B]' : 'bg-gray-200'
+                  }`} />
               )}
             </React.Fragment>
           ))}
@@ -161,7 +159,7 @@ export const Booking: React.FC = () => {
                   onClick={handleNext}
                   disabled={!formData.customerName || !formData.customerEmail || !formData.customerPhone}
                 >
-                  Next <ArrowRight className="ml-2 w-5 h-5" />
+                  Next
                 </Button>
               </div>
             </div>
@@ -209,7 +207,7 @@ export const Booking: React.FC = () => {
                   onClick={handleNext}
                   disabled={!formData.origin || !formData.destination || !formData.cargoType || !formData.weight}
                 >
-                  Next <ArrowRight className="ml-2 w-5 h-5" />
+                  Next
                 </Button>
               </div>
             </div>
@@ -223,11 +221,10 @@ export const Booking: React.FC = () => {
                   <div
                     key={type.id}
                     onClick={() => setFormData({ ...formData, shipmentType: type.id })}
-                    className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${
-                      formData.shipmentType === type.id
+                    className={`p-6 rounded-xl border-2 cursor-pointer transition-all ${formData.shipmentType === type.id
                         ? 'border-[#0077B6] bg-[#0077B6]/5 shadow-lg'
                         : 'border-gray-200 hover:border-gray-300'
-                    }`}
+                      }`}
                   >
                     <div className={`w-12 h-12 bg-gradient-to-br ${type.color} rounded-lg flex items-center justify-center mb-4`}>
                       <type.icon className="w-6 h-6 text-white" />
@@ -242,7 +239,7 @@ export const Booking: React.FC = () => {
                   Back
                 </Button>
                 <Button onClick={handleNext}>
-                  Get Quote <ArrowRight className="ml-2 w-5 h-5" />
+                  Get Quote
                 </Button>
               </div>
             </div>

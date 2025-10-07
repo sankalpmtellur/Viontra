@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onBooking, onTrack }) => {
             <Button size="lg" variant="secondary" onClick={onBooking}>
               Book Your Shipment
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#0077B6]">
+            <Button size="lg" variant="outlineOnDark">
               Watch Demo
             </Button>
           </div>

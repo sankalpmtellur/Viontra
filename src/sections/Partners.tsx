@@ -2,42 +2,48 @@ import React from 'react';
 import { Star, Quote, Plane, Truck, Ship, Globe } from 'lucide-react';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
+import vietjetLogo from '../assets/vietjet.webp';
+import vrlLogo from '../assets/vrl.webp';
+import maerskLogo from '../assets/maersk.webp';
+import dhlLogo from '../assets/dhl.webp';
+import indiaPostLogo from '../assets/indiapost.webp';
+import vietnamPostLogo from '../assets/vietnampost.webp';
 
 export const Partners: React.FC = () => {
   const partners = [
     {
       name: 'Vietjet Air',
-      logo: 'https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=400',
+      logo: vietjetLogo,
       category: 'Air Freight',
       description: 'Leading airline partner for express air freight between India and Vietnam'
     },
     {
       name: 'VRL Logistics',
-      logo: 'https://images.pexels.com/photos/1118448/pexels-photo-1118448.jpeg?auto=compress&cs=tinysrgb&w=400',
+      logo: vrlLogo,
       category: 'Land Transport',
       description: 'Trusted land transportation partner across India and Southeast Asia'
     },
     {
       name: 'Maersk Line',
-      logo: 'https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=400',
+      logo: maerskLogo,
       category: 'Sea Freight',
       description: 'Global ocean freight partner for container shipping'
     },
     {
       name: 'DHL Express',
-      logo: 'https://images.pexels.com/photos/210126/pexels-photo-210126.jpeg?auto=compress&cs=tinysrgb&w=400',
+      logo: dhlLogo,
       category: 'Express Delivery',
       description: 'Last-mile delivery partner for time-sensitive shipments'
     },
     {
       name: 'India Post',
-      logo: 'https://images.pexels.com/photos/127905/pexels-photo-127905.jpeg?auto=compress&cs=tinysrgb&w=400',
+      logo: indiaPostLogo,
       category: 'Postal Network',
       description: 'Government postal partner for domestic distribution'
     },
     {
       name: 'Vietnam Post',
-      logo: 'https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=400',
+      logo: vietnamPostLogo,
       category: 'Postal Network',
       description: 'National postal service partner in Vietnam'
     }
@@ -85,11 +91,11 @@ export const Partners: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {partners.map((partner, index) => (
             <Card key={index} hover className="p-6">
-              <div className="h-32 rounded-xl overflow-hidden mb-4">
+              <div className="w-full aspect-[16/9] rounded-xl overflow-hidden mb-4 bg-white flex items-center justify-center p-4">
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="w-full h-full object-cover"
+                  className="max-h-full max-w-full object-contain"
                 />
               </div>
               <div className="inline-block px-3 py-1 bg-[#0077B6]/10 text-[#0077B6] text-xs font-semibold rounded-full mb-3">
@@ -108,7 +114,7 @@ export const Partners: React.FC = () => {
             Join our network of global logistics partners and expand your reach across India and Vietnam
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#0077B6]">
+            <Button size="lg" variant="outlineOnDark">
               Partnership Opportunities
             </Button>
             <Button size="lg" variant="secondary">

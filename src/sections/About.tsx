@@ -1,26 +1,30 @@
 import React from 'react';
 import { Target, Eye, Award, Users } from 'lucide-react';
 import { Card } from '../components/Card';
-
+import sankalpImg from '../assets/sankalp.webp';
+import riteshImg from '../assets/ritesh.webp';
+import adityaImg from '../assets/aditya.webp';
+import bgLogoImg from '../assets/bglogo.webp';
+  
 export const About: React.FC = () => {
   const team = [
     {
-      name: 'Rajesh Kumar',
+      name: 'Sankalp M Tellur',
       role: 'CEO & Co-Founder',
-      bio: 'Former logistics director with 15+ years in supply chain optimization',
-      avatar: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400'
+      bio: 'Led many teams, tech-related projects, and have experience in leadership.',
+      avatar: sankalpImg
     },
     {
-      name: 'Nguyen Thi Mai',
+      name: 'Ritesh Kumar',
       role: 'CTO & Co-Founder',
-      bio: 'AI/ML expert specializing in predictive logistics and route optimization',
-      avatar: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400'
+      bio: 'Done many tech-related projects and have experience in full-stack development and AI features.',
+      avatar: riteshImg
     },
     {
-      name: 'Arjun Patel',
+      name: 'Aditya Shankar',
       role: 'COO & Co-Founder',
-      bio: 'Operations specialist with expertise in multi-modal transportation',
-      avatar: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg?auto=compress&cs=tinysrgb&w=400'
+      bio: 'Operations specialist with expertise in logistics and project management.',
+      avatar: adityaImg
     }
   ];
 
@@ -50,7 +54,7 @@ export const About: React.FC = () => {
             About <span className="bg-gradient-to-r from-[#0077B6] to-[#F76C1B] bg-clip-text text-transparent">Viontra</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Revolutionizing logistics between India and Vietnam through AI-powered technology and multi-modal transportation
+            Revolutionising logistics between India and Vietnam through AI-powered technology and multi-modal transportation
           </p>
         </div>
 
@@ -61,26 +65,21 @@ export const About: React.FC = () => {
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h3>
                 <div className="space-y-4 text-gray-600">
                   <p>
-                    Founded in 2023, Viontra emerged from a simple observation: logistics between India and Vietnam was fragmented,
-                    expensive, and opaque. Businesses struggled with multiple vendors, unpredictable delivery times, and hidden costs.
+                    Founded in 2025, Viontra was born with a vision to redefine the way goods move across cities and countries. We believe transportation should be intelligent, efficient, and seamlessly connected — not limited by distance or complexity.
                   </p>
                   <p>
-                    We set out to change that. By leveraging cutting-edge AI technology and forging strategic partnerships with
-                    leading carriers like Vietjet and VRL, we created a unified platform that makes international shipping as
-                    simple as ordering online.
+                    At Viontra, we're building a tech-driven logistics ecosystem that integrates AI-powered route optimization, smart fleet tracking, and data-driven decision-making. Our platform ensures that businesses — from startups to enterprises — can move goods faster, safer, and more affordably.
                   </p>
                   <p>
-                    Today, Viontra handles thousands of shipments monthly, connecting exporters, SMEs, and e-commerce players
-                    across two of Asia's fastest-growing economies. Our AI-powered platform optimizes routes, predicts delays,
-                    and reduces costs by up to 30%.
+                    Guided by our mission “Connecting the world, mile by mile,” we aim to simplify global logistics, empower transport operators, and make every delivery smarter and more sustainable.
                   </p>
                 </div>
               </div>
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=800"
-                    alt="Logistics Operations"
+                    src={bgLogoImg}
+                    alt="Viontra Logo"
                     className="w-full h-full object-cover"
                   />
                 </div>

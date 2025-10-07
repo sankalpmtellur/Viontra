@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'outlineOnDark';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
 }
@@ -18,7 +18,10 @@ export const Button: React.FC<ButtonProps> = ({
   const variants = {
     primary: 'bg-gradient-to-r from-[#0077B6] to-[#0096C7] text-white hover:shadow-lg hover:shadow-blue-500/50',
     secondary: 'bg-gradient-to-r from-[#F76C1B] to-[#FF8C42] text-white hover:shadow-lg hover:shadow-orange-500/50',
-    outline: 'border-2 border-[#0077B6] text-[#0077B6] hover:bg-[#0077B6] hover:text-white'
+    outline: 'border-2 border-[#0077B6] text-[#0077B6] hover:bg-[#0077B6] hover:text-white',
+    // For use on dark/colored backgrounds (e.g., hero gradients, dark footers)
+    // Default state: white border/text; Hover: white background with brand text
+    outlineOnDark: 'border-2 border-white text-white hover:bg-white hover:text-[#0077B6]'
   };
 
   const sizes = {

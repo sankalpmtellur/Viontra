@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
 import { Input, TextArea } from '../components/Input';
@@ -103,8 +103,8 @@ export const Contact: React.FC = () => {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                 />
-                <Button type="submit" className="w-full" size="lg">
-                  Send Message <Send className="ml-2 w-5 h-5" />
+                <Button type="submit" className="w-full flex items-center justify-center gap-2" size="lg">
+                  Send Message
                 </Button>
               </form>
             )}
@@ -153,7 +153,7 @@ export const Contact: React.FC = () => {
               <p className="text-white/90 mb-4">
                 Need immediate assistance? Our support team is available around the clock to help with your shipments.
               </p>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#0077B6]">
+              <Button variant="outlineOnDark">
                 Live Chat Support
               </Button>
             </Card>

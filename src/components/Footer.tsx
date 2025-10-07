@@ -110,7 +110,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               placeholder="Enter your email"
               className="flex-1 md:w-64 px-4 py-2 rounded-lg outline-none"
             />
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#0077B6] whitespace-nowrap">
+            <Button variant="outlineOnDark" className="whitespace-nowrap hover:text-[#F76C1B]">
               Subscribe
             </Button>
           </div>
